@@ -1,0 +1,41 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+.dm-Placeholder { background-color: rgba(0, 0, 0, 0.025); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset; border-radius: 2px; margin-bottom: 12px; min-height: 80px; }
+
+.t-Body-info .dm-Placeholder { margin: 16px 24px; }
+
+.t-Body-actionsContent .dm-Placeholder, .t-Body-side .dm-Placeholder { margin: 12px; }
+
+.dm-Placeholder--slim { box-shadow: none; background-color: transparent; margin: 0; padding: 0; min-height: 0; }
+
+.dm-Placeholder--slim h3 { margin: 0; }
+
+.dm-ColorBlock, .dm-Placeholder { display: flex; flex-direction: column; justify-content: center; flex: 1; font-size: 14px; text-align: center; padding: 16px; }
+
+.dm-ColorBlock .a-Icon, .dm-Placeholder .a-Icon { display: block; margin: 24px auto 0 auto; width: 32px; height: 32px; }
+
+.dm-ColorBlock .a-Icon:before, .dm-Placeholder .a-Icon:before { font-size: 32px; }
+
+.dm-ColorBlock h3, .dm-Placeholder h3 { font-size: 16px; line-height: 1.5; margin: 12px 0 24px 0; }
+
+.dm-ContentWell { background-color: rgba(255, 255, 255, 0.75); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset; border-radius: 2px; overflow: auto; }
+
+.dm-ContentWell--padded { padding: 8px; }
+
+.dm-ContentWell--buttons { background-color: transparent; box-shadow: none; }
+
+.dm-ContentWell--buttons .row { margin-top: 4px; margin-bottom: 4px; }
+
+.t-Region-body .dm-Placeholder, .t-Alert--horizontal .dm-Placeholder, .t-ButtonRegion .dm-Placeholder { margin-bottom: 0; background-color: transparent; box-shadow: none; }
+
+.t-Region-body .dm-Placeholder h3, .t-Alert--horizontal .dm-Placeholder h3, .t-ButtonRegion .dm-Placeholder h3 { margin: 0; }
+
+.t-Alert .dm-Placeholder { min-height: 0; padding: 0; }
+
+.t-Alert .dm-Placeholder .a-Icon { margin-top: 0; }
+
+.t-Alert .dm-Placeholder h3 { margin: 0; }
+
+.dm-Placeholder .t-Alert--wizard { margin-bottom: 0; }
+
+.t-Wizard-body .dm-Placeholder { margin: 0; min-height: 0; }

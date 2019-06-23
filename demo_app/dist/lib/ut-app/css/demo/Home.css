@@ -1,0 +1,37 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+body.dm-Home .t-Body { color: #FFF; }
+
+body.dm-Home .t-Body div#t_Body_content { margin-top: 0 !important; }
+
+.dm-Home.dm-Page .t-Body-contentInner { margin: 0 auto; }
+
+.dm-Home { background-color: #0572CE; background-image: linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.075) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.075) 1px, transparent 1px); background-size: 96px 96px, 96px 96px, 16px 16px, 16px 16px; background-position: 0 0; }
+
+.dm-Home .t-Body-content { padding-bottom: 0; }
+
+.dm-Home .t-Body-topButton { display: none !important; }
+
+.dm-Home .t-Body { background-color: transparent; }
+
+.dm-Home .dm-Hero { border-width: 0; }
+
+.dm-Home .dm-Hero > h1 { font-size: 6rem; line-height: 1.25; }
+
+.dm-Home .dm-Hero > h1 span { font-size: 2.4rem; }
+
+.dm-Home .dm-Hero > h2 { font-size: 3.0rem; }
+
+.dm-Home .t-Card:hover { -webkit-transform: none; transform: none; }
+
+.dm-Home .t-Cards--featured .t-Card-wrap { background: rgba(255, 255, 255, 0.25); color: #FFF; border-color: rgba(255, 255, 255, 0.5); transition: background .2s ease, border-color .2s ease; }
+
+.dm-Home .t-Cards--featured .t-Card-wrap:hover, .dm-Home .t-Cards--featured .t-Card-wrap:focus { background: rgba(0, 0, 0, 0.25); border-color: rgba(0, 0, 0, 0.25); }
+
+.dm-Home .t-Card-icon.u-color { background: transparent; color: inherit; }
+
+.dm-Home .t-Card-icon .t-Icon, .dm-Home .t-Card-title { color: inherit; }
+
+.dm-Home .t-Cards--featured.t-Cards--hideBody .t-Card .t-Card-titleWrap { margin-top: 0; }
+
+.dm-gt-description { padding-top: 1.2rem; padding-bottom: 1.2rem; }

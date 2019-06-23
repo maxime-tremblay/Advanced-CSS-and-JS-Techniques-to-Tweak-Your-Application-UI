@@ -1,0 +1,52 @@
+/* ***********************************
+ * Page 1400 Specific Styles
+ * Region in Navbar
+ * *********************************** */
+$namespace: page-1400;
+
+.#{$namespace} {
+   .t-TreeNav {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      ul {
+         flex: 1 0 auto;
+      }
+
+      .underNavBar{
+         flex: 0 0 auto;
+      }
+   }
+
+   .profile-wrap img {
+      height: 128px;
+      width: 128px;
+      border-radius: 100%;
+   }
+
+   /* Navmenu User Region Styling */
+   .userImage--navMenu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #505f6d;
+   }
+   
+   /* Navmenu Contact Region Styling */
+   .contact--navMenu {
+      display: flex;
+      justify-content: space-evenly;
+   }
+
+   /* When navmenu is collapsed */
+   .js-navCollapsed .contact--navMenu {
+      flex-direction: column;
+      align-items: center;
+
+      .fa {
+         font-size: 24px;
+      }
+   }
+}

@@ -1,0 +1,31 @@
+/* ***********************************
+ * Page 1000 Specific Styles
+ * Button with sliding icon on hover
+ * *********************************** */
+$namespace: page-1000;
+
+.#{$namespace} {
+   /* Adding progress indicator */
+   .js-autoDismissSuccessMessage #t_Alert_Success:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background-color: darken(rgba(59, 170, 44, 0.9), 10%);
+      animation-name: hideSuccessMessage;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+   }
+
+   @include keyframes(hideSuccessMessage) {
+      0% {
+          width: 100%;
+      }
+      100% {
+          width: 0%;
+      }
+   }
+}

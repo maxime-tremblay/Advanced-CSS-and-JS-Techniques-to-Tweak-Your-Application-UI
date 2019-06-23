@@ -1,0 +1,53 @@
+/* ***********************************
+ * Page 1400 Specific Styles
+ * Region in Navbar
+ * *********************************** */
+$namespace: page-1500;
+
+.#{$namespace} {
+   .bio--desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .profile-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+         height: 128px;
+         width: 128px;
+         border-radius: 100%;
+      }
+   }
+
+   .flip-container {
+      .flipRegion--trigger {
+         .t-Icon {
+            animation: anim-spin 2s infinite linear;
+            animation-play-state: paused;
+            animation-delay: .2s;
+            animation-direction: alternate;
+         }
+            
+         &:focus .t-Icon,
+         &:hover .t-Icon {
+            animation-play-state: running
+         }
+      }
+     
+      .front {
+       
+      }
+
+      .back {
+         .t-Region-header {
+            background-color: rgba(222, 225, 228, 0.9);
+         }      
+      }
+   }
+}

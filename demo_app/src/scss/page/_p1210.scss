@@ -1,0 +1,24 @@
+/* ***********************************
+ * Page 1000 Specific Styles
+ * Button with sliding icon on hover
+ * *********************************** */
+$namespace: page-1210;
+
+.#{$namespace} {
+   //force subitem of the navbar to bee hidden when screen is small and larger
+   //must rely on index since the class is not carried over
+   //1. Help
+   //2. Notification
+   //3. Profle
+   //4. Sign Out
+
+   //item class:      .a-Menu-item:nth-child()
+   //separator class: .a-Menu-itemSep:nth-child()
+   @media (min-width: 640px) {
+      .t-NavigationBar-menu .a-Menu-item:nth-child(1),
+      .t-NavigationBar-menu .a-Menu-item:nth-child(2),
+      .t-NavigationBar-menu .a-Menu-item:nth-child(3) {
+         display: none!important;
+      }
+   }
+}

@@ -1,0 +1,21 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+.dm-Instructions-section { margin-top: 24px; margin-bottom: 24px; }
+
+.dm-Instructions-title { font-size: 1.4rem; line-height: 1.6rem; font-weight: 500; margin-bottom: 8px; }
+
+.dm-Instructions-list { margin: 0; padding: 0; list-style: none; }
+
+.dm-Instructions-list + .dm-Instructions-title { margin-top: 12px; }
+
+.dm-Instructions-listItem { font-size: 1.2rem; line-height: 1.6rem; padding: 4px 0; }
+
+.dm-Instructions-label { width: 20%; float: left; }
+
+.u-RTL .dm-Instructions-label { float: right; }
+
+.dm-Instructions-value { overflow: hidden; }
+
+.how-to-template-options { margin: 0; padding: 0; list-style: none; }
+
+.how-to-template-options .t-AVPList-label, .how-to-template-options .t-AVPList-value { font-size: 12px; }

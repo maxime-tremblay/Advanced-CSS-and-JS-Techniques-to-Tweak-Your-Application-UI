@@ -1,0 +1,86 @@
+/* ***********************************
+ * Page 101 Specific Styles
+ * Login Page
+ * *********************************** */
+$namespace: page-101;
+
+.#{$namespace} {
+    $z-index-below: 20;
+    $z-index-above: $z-index-below + 1;
+
+    .t-Region--loginWrapper {
+        position: relative;
+        height: 550px;
+
+        .t-Region--login{
+            position: absolute;
+            z-index: $z-index-above;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .t-Region--register{
+            position: absolute;
+            z-index: $z-index-below;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &.is-register .t-Region--register{
+            z-index: $z-index-above + 1;
+        }
+
+        &.anim-showRegister {
+            .t-Region--register{
+                @include animation('showRegister 1s .2s 1 ease-in-out forwards');
+            }
+            .t-Region--login{
+                @include animation('showLogin 1s .2s 1 ease-in-out reverse');
+            }
+        }
+
+        &.anim-showLogin {
+            .t-Region--register{
+                @include animation('showRegister 1s .2s 1 ease-in-out reverse  !important');
+            }
+            .t-Region--login{
+                @include animation('showLogin 1s .2s 1 ease-in-out forwards  !important');
+            }
+        }
+
+
+    }
+
+    @include keyframes(showRegister) {
+        0% {
+            transform: translateX(0) scale(.5);
+            z-index: $z-index-below;
+        }
+        50%{
+            transform: translateX(-120%) scale(1.2);
+            z-index: $z-index-above;
+        }
+        100% {
+            transform: translateX(0) scale(1);
+            z-index: $z-index-above;
+        }
+    }
+    @include keyframes(showLogin) {
+        0% {
+            transform: translateX(0) scale(.5);
+            z-index: $z-index-below;
+        }
+        50%{
+            transform: translateX(120%) scale(1.2);
+            z-index: $z-index-above;
+        }
+        100% {
+            transform: translateX(0) scale(1);
+            z-index: $z-index-above;
+        }
+    }
+}

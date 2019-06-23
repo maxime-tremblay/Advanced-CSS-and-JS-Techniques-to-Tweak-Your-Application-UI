@@ -1,0 +1,37 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+.t-Body-contentInner { max-width: 960px; }
+
+.t-Body-contentInner img { max-width: 100%; }
+
+.dm-Page--center form#wwvFlowForm { display: flex; flex-direction: column; justify-content: center; flex: 1; }
+
+.col-1 > .dm-Grid-region:before { content: '1 Column'; }
+
+.col-2 > .dm-Grid-region:before { content: '2 Columns'; }
+
+.col-3 > .dm-Grid-region:before { content: '3 Columns'; }
+
+.col-4 > .dm-Grid-region:before { content: '4 Columns'; }
+
+.col-5 > .dm-Grid-region:before { content: '5 Columns'; }
+
+.col-6 > .dm-Grid-region:before { content: '6 Columns'; }
+
+.col-7 > .dm-Grid-region:before { content: '7 Columns'; }
+
+.col-8 > .dm-Grid-region:before { content: '8 Columns'; }
+
+.col-9 > .dm-Grid-region:before { content: '9 Columns'; }
+
+.col-10 > .dm-Grid-region:before { content: '10 Columns'; }
+
+.col-11 > .dm-Grid-region:before { content: '11 Columns'; }
+
+.col-12 > .dm-Grid-region:before { content: '12 Columns'; }
+
+.dm-Grid-region { border: 1px solid rgba(0, 0, 0, 0.15); background-color: rgba(0, 0, 0, 0.1); border-radius: 2px; display: flex; align-items: center; justify-content: stretch; height: 48px; font-size: 11px; color: rgba(0, 0, 0, 0.5); margin-bottom: 16px; }
+
+.dm-Grid-region:before { text-align: center; display: block; width: 100%; }
+
+.dm-Grid-region:hover { background-color: #fff; color: inherit; }

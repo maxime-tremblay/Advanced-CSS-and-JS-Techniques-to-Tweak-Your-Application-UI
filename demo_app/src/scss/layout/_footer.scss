@@ -1,0 +1,58 @@
+.t-Footer {
+    .t-Footer-body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 640px) {
+        .t-Footer-body{
+            justify-content: center;
+        }
+    }
+
+    .contact-wrap {
+        display: flex;
+        align-items: center;
+
+        .copyright {
+            flex: 0 0 auto;
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+
+            .contact-elem {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@include keyframes(slide-up) {
+    0% {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+}
+
+.t-Footer-topButton:hover .a-Icon {
+    @include animation('slide-up 2s 0s linear infinite');
+    opacity: 0;
+}
+
+/* Apex 5.1 Hide Screen Reader and Customize Links */
+footer .t-Footer-customize,
+footer .t-Footer-srMode {
+    display: none;
+}

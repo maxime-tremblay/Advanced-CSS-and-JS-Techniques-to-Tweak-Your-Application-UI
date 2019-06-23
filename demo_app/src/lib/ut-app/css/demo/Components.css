@@ -1,0 +1,11 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+.dm-Components .t-Cards--featured .t-Card .t-Card-icon, .dm-Components .t-Cards--featured .t-Card .t-Card-icon .dm-Icon { border-radius: 2px; }
+
+.dm-Components .t-Cards--featured .t-Card .t-Card-icon .dm-Icon { background-color: #6692BF !important; }
+
+.dm-Components .t-Cards--featured .t-Card:hover { -webkit-transform: none; transform: none; box-shadow: none; background-color: rgba(0, 0, 0, 0.05); }
+
+.dm-Components .t-Cards--featured .t-Card-wrap { background-color: transparent; border-width: 0; box-shadow: none; }
+
+.dm-Components--small .t-Cards--featured .t-Card .t-Card-icon, .dm-Components--small .t-Cards--featured .t-Card .t-Card-icon .dm-Icon { width: 128px; height: 128px; }

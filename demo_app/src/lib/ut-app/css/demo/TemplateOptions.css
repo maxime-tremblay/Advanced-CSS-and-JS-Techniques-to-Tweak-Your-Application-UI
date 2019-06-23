@@ -1,0 +1,45 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+.dm-TO { display: block; background-color: #FFF; border: 1px solid rgba(0, 0, 0, 0.1); padding: 0; overflow: hidden; }
+
+/* Basic Structure ========================================================================== */
+.dm-TO-list, .dm-TO-optionsList { margin: 0; padding: 0; list-style: none; }
+
+.dm-TO-list li, .dm-TO-optionsList li { font-size: 1.2rem; line-height: 1.6rem; }
+
+.dm-TO-group { padding: 16px; overflow: hidden; }
+
+.is-advanced .dm-TO-groupType { font-size: 11px; line-height: 1.2rem; text-transform: uppercase; color: #707070; background-color: #F0F0F0; padding: 4px 8px; border-radius: 2px; margin-bottom: 4px; display: inline-block; }
+
+.dm-TO-group:not(:last-child) { border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.dm-TO-info { padding-right: 16px; }
+
+.u-RTL .dm-TO-info { padding-right: 0; padding-left: 16px; }
+
+.dm-TO-body { font-size: 1.2rem; line-height: 1.6rem; }
+
+/* Group Title and Description ========================================================================== */
+.dm-TO-groupDesc { font-size: 1.2rem; margin-top: 0; color: #707070; }
+
+.dm-TO-groupTitle + .dm-TO-groupDesc { margin-top: -12px; }
+
+.dm-TO-options.is-default .dm-TO-option { font-weight: bold; }
+
+.dm-TO-options.is-default .t-Icon { color: rgba(0, 181, 51, 0.75); }
+
+.dm-TO-option, .dm-TO-desc { padding-top: 4px; padding-bottom: 4px; }
+
+.dm-TO-option { line-height: 1.6rem; padding-left: 32px; }
+
+.u-RTL .dm-TO-option { padding-left: 0; padding-right: 32px; }
+
+.dm-TO-option .t-Icon { margin-left: -24px; vertical-align: top; margin-right: 8px; color: #A0A0A0; }
+
+.u-RTL .dm-TO-option .t-Icon { margin-left: 8px; margin-right: -24px; }
+
+.dm-TO-desc { color: #707070; padding-left: 24px; }
+
+.u-RTL .dm-TO-desc { padding-left: 0; padding-right: 24px; }
+
+@media (max-width: 640px) { .dm-TO-options { margin-left: 0; margin-right: 0; } .dm-TO-options:not(:last-child) { margin-bottom: 8px; } .dm-TO-option, .dm-TO-desc { padding-top: 0; padding-bottom: 0; } .dm-TO-desc { font-size: 11px; } }

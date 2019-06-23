@@ -1,0 +1,11 @@
+/* ***********************************
+ * Page 1000 Specific Styles
+ * Button with sliding icon on hover
+ * *********************************** */
+$namespace: page-3110;
+
+.#{$namespace} {
+   .t-Body-contentInner {
+      max-width: 100%;
+   }
+}

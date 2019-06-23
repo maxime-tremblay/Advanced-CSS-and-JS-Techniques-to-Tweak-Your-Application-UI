@@ -1,0 +1,10 @@
+/* IE11 Body min height fix */
+.t-Body-main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.t-Body-content {
+    min-height: calc(100vh - #{$header-height});
+}

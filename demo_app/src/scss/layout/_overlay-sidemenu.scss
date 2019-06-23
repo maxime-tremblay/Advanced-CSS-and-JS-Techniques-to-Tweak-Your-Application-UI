@@ -1,0 +1,37 @@
+.t-PageBody--overlayNav {
+    /*
+    .t-Button.t-Button--headerTree {
+        display: inline-block;
+    }
+*/
+    .t-Body-nav {
+        display: block;
+        position: fixed;
+        top: 48px;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .t-TreeNav {
+        height: 100%;
+    }
+    
+    .t-Body-title {
+        left: 0;
+        right: 0;
+    }
+
+    &.js-navCollapsed .t-Body-nav {
+        left: -100%;
+    }
+
+    &.js-navExpanded .t-Body-nav {
+        left:0;
+    }
+
+    @media only screen and (max-width: 480px) {
+        .t-Body-nav {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@media screen {
+  /* Hide elements that are only visible when printed */
+  .printOnly {
+    display: none; } }
+
+@media print {
+  /* Removes header (including top menu), side menu, footer, back to top button and dev toolbar */
+  header,
+  .t-Body-nav,
+  .t-Body-side,
+  .t-Body-actions,
+  footer,
+  #t_Body_content_offset,
+  .t-Body .t-Body-main .t-Body-content .t-Body-topButton,
+  #apexDevToolbar {
+    display: none !important; }
+  /* Display elements that are only visible when printed */
+  .printOnly {
+    display: block; }
+  /* Hide elements that are only visible on screen */
+  .showOnly {
+    display: none; }
+  .apex-side-nav .t-Body-nav,
+  .apex-side-nav .t-Body-actions,
+  .apex-side-nav .t-Body-title {
+    top: 0; }
+  :not(.u-RTL) .apex-side-nav .t-Body-main {
+    margin-left: 0; }
+  .u-RTL .apex-side-nav .t-Body-main {
+    margin-right: 0; }
+  .apex-top-nav .t-Body-actions {
+    top: 0; }
+  .apex-top-nav .t-Body-title {
+    top: 0; }
+  .t-Body-nav {
+    width: 0; }
+  .t-Body-actions {
+    width: 0; }
+  :not(.u-RTL) .t-Body-actions .t-Button--header {
+    -webkit-transform: none;
+    transform: none; }
+  .u-RTL .t-Body-actions .t-Button--header {
+    -webkit-transform: none;
+    transform: none; }
+  :not(.u-RTL) .apex-side-nav.js-navExpanded .t-Body-main {
+    margin-left: 0; }
+  .u-RTL .apex-side-nav.js-navExpanded .t-Body-main {
+    margin-right: 0; }
+  :not(.u-RTL) .apex-side-nav.js-navExpanded .t-Body-main {
+    -webkit-transform: none;
+    transform: none; }
+  .u-RTL .apex-side-nav.js-navExpanded .t-Body-main {
+    -webkit-transform: none;
+    transform: none; }
+  .apex-side-nav.js-navCollapsed .t-Body-nav,
+  .apex-side-nav.js-navCollapsed .t-Body-nav .t-TreeNav {
+    width: 0; }
+  :not(.u-RTL) .apex-side-nav.js-navCollapsed .t-Body-content,
+  :not(.u-RTL) .apex-side-nav.js-navCollapsed .t-Body-title,
+  :not(.u-RTL) .apex-side-nav.js-navCollapsed .t-Body-side {
+    margin-left: 0; }
+  .u-RTL .apex-side-nav.js-navCollapsed .t-Body-content,
+  .u-RTL .apex-side-nav.js-navCollapsed .t-Body-title,
+  .u-RTL .apex-side-nav.js-navCollapsed .t-Body-side {
+    margin-right: 0; }
+  .t-PageBody.js-rightExpanded .t-Body-main {
+    margin-right: 0; }
+  :not(.u-RTL) .t-PageBody.js-rightExpanded .t-Body-main,
+  :not(.u-RTL) .t-PageBody.js-rightExpanded .t-Body-nav {
+    -webkit-transform: none !important;
+    transform: none !important; }
+  .u-RTL .t-PageBody.js-rightExpanded .t-Body-main,
+  .u-RTL .t-PageBody.js-rightExpanded .t-Body-nav {
+    -webkit-transform: none;
+    transform: none; }
+  .t-PageBody.js-rightCollapsed .t-Body-main {
+    margin-right: 0px; }
+  .t-PageBody.js-rightCollapsed .t-Body-title {
+    right: 0px; }
+  :not(.u-RTL) .t-PageBody.js-rightCollapsed .t-Body-actions {
+    -webkit-transform: none;
+    transform: none; }
+  .u-RTL .t-PageBody.js-rightCollapsed .t-Body-actions {
+    -webkit-transform: none;
+    transform: none; }
+  /* Removes background image from the body */
+  body {
+    background-image: none !important; }
+  /* IRR floating header - Prevent floating */
+  .t-IRR-region .js-stickyTableHeader {
+    top: 0px !important;
+    width: inherit !important; }
+  .t-Body-content {
+    min-height: 0; }
+  /* Prevent IRR rows from breaking/printing on two pages */
+  .t-IRR-region .a-IRR-table tbody tr {
+    page-break-inside: avoid; }
+  /* Display the URLs after all hyperlink elements */
+  a:after {
+    content: " [" attr(href) "] "; }
+  .t-Body-contentInner {
+    padding: 0; }
+  .t-Form-labelContainer {
+    text-align: left; } }
+
+/*# sourceMappingURL=apexPrintStylesheet.css.map */

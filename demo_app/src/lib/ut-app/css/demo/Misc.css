@@ -1,0 +1,70 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+/* ========================================================================== IRR Icons ========================================================================== */
+.dm-IRR-icon { text-align: center; padding: 12px; }
+
+.dm-IRR-icon .fa { font-size: 28px; display: block; }
+
+.dm-IRR-iconLabel { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.is-open { color: #ff2d55; }
+
+.is-holding { color: #ffcc00; }
+
+.is-pending { color: #ff9500; }
+
+.is-closed { color: #4cd964; }
+
+.dm-Migration-region { max-width: 80%; /* margin: 0 auto;*/ }
+
+.dm-Migration-region > h1 { margin-top: 16vh; }
+
+.dm-Migration-region > h2 { margin-top: 8vh; }
+
+.dm-Migration-region > h3 { margin-top: 4vh; font-size: 2.0rem; }
+
+.dm-Migration-region ul { margin: 0; padding: 0; list-style-type: decimal; }
+
+.dm-Migration-region li { margin-left: 24px; margin-bottom: 4vh; }
+
+/* ========================================================================== Color Palette Boxes ========================================================================== */
+code.event-name { background: rgba(147, 180, 197, 0.25); padding: 6px 8px; border-radius: 3px; text-shadow: 1px 1px #fff; }
+
+code.event-name:hover { color: #000; background: #eee; }
+
+.color-blocks { display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 24px; }
+
+.color-blocks--large .color-block { width: 33.33%; }
+
+.color-block { text-align: center; height: 64px; display: flex; align-items: center; width: 20%; justify-content: center; flex: auto; border: 4px solid transparent; background-clip: padding-box; }
+
+.color-cell-block { display: block; padding: 8px; text-align: center; border-radius: 2px; }
+
+.color-border { border-width: 1px; border-style: solid; padding: 7px; }
+
+.colors-table .t-Report-report { table-layout: fixed; }
+
+.t-Region-body > h2 { font-size: 16px; font-weight: bold; }
+
+.dm-UL li + li { margin-top: 16px; }
+
+/* Animation Gestures ========================================================================== */
+.touch-region { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+.touch-region .anim-icon { height: 128px; border-radius: 2px; background-color: #fff9c4; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; overflow: hidden; }
+
+.js-event-icon { width: 48px; height: 48px; line-height: 48px; text-align: center; border-radius: 100%; background-color: #3170C8; color: #FFF; transition: .2s transform ease; }
+
+.js-event-text { font-family: monospace; }
+
+.touch-region.is-active .anim-icon .fa { -webkit-animation: touch-active .5s forwards ease; animation: touch-active .5s forwards ease; }
+
+@-webkit-keyframes touch-active { 0% { -webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); }
+  10% { -webkit-transform: scale(0.85) rotate(50deg); transform: scale(0.85) rotate(50deg); }
+  50% { -webkit-transform: scale(1.5) rotate(90deg); transform: scale(1.5) rotate(90deg); }
+  100% { -webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); } }
+
+@keyframes touch-active { 0% { -webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); }
+  10% { -webkit-transform: scale(0.85) rotate(50deg); transform: scale(0.85) rotate(50deg); }
+  50% { -webkit-transform: scale(1.5) rotate(90deg); transform: scale(1.5) rotate(90deg); }
+  100% { -webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); } }

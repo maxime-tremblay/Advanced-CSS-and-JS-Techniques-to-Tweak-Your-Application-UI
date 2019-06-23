@@ -1,0 +1,90 @@
+/* Navigation Menu & Bar - Hover Animation */
+.t-Button--navBar:hover .t-Icon.a-Icon,
+.t-Button--navBar:hover .t-Icon.fa,
+.t-TreeNav .a-TreeView-node--topLevel .a-TreeView-content:hover .a-Icon,
+.t-TreeNav .a-TreeView-node--topLevel .a-TreeView-content:hover .fa,
+.t-NavigationBar-menu .a-Menu-content .a-Menu-item:hover .a-Icon,
+.t-NavigationBar-menu .a-Menu-content .a-Menu-item:hover .fa {
+  animation: tada 2s linear infinite;
+  color: #26cbff;
+}
+
+/* Navigation Menu - Active Animation */
+.t-TreeNav .a-TreeView-node--topLevel .a-TreeView-content.is-selected .fa,
+.t-TreeNav .a-TreeView-node--topLevel .a-TreeView-content.is-selected .a-Icon {
+  animation: pulse 2s linear infinite;
+  color: #26cbff;
+}
+
+/* Navigation Menu - Fixes the submenu icon height */
+// .t-TreeNav .a-TreeView-node--topLevel .a-TreeView-node .fa {
+//     line-height: 32px;
+//     margin-left: 5px;
+//     margin-right: 5px;
+// }
+
+// /*
+//  * Expand navigation menu entry with ellipsis
+//  */
+// .t-TreeNav {
+//   $nav-menu-bg-color-hover: #d9d9d9;
+//   $nav-menu-bg-color-focused: #505f6d;
+
+//   .a-TreeView-node--topLevel {
+//      .a-TreeView-row.is-hover {
+//         background-color: none !important; /* important is required to override UT's default property */
+//      }
+     
+//      .a-TreeView-row {
+//         transition: none;
+//      }
+
+//      /* Remove the child entry padding bottom so that we don't highlight the parent when
+//      hovering the padding between the last child and the next menu entry */
+//      & > ul {
+//         padding: 8px 0 0 0;
+
+//         /* Add the padding that was removed above */
+//         & > .a-TreeView-node:last-child {
+//         padding-bottom: 8px;
+//         }
+//      }
+//   }
+
+//   .a-TreeView-node--topLevel,
+//   .a-TreeView-node--leaf {
+//      .a-TreeView-content.is-hover .a-TreeView-label {
+//         position: fixed;
+//         width: auto;
+        
+//         z-index: 2; /* Make the text appear on top of the Toggle icon */
+        
+//         &:after {
+//            position: absolute;
+//            top: 0;
+//            right: -16px; /* Adds some padding at the end of the label */
+//            bottom: 0;
+//            left: 0;
+//            content: "";
+//            z-index: -1;
+//            background-color: $nav-menu-bg-color-hover; /* This would be your primary color */
+//         }
+
+//         &.is-focused:after{
+//            border-top: 1px solid $nav-menu-bg-color-focused;
+//            border-bottom: 1px solid $nav-menu-bg-color-focused;
+//         }
+//      }
+//   }
+
+//   .a-TreeView-node--leaf .a-TreeView-content.is-hover .a-TreeView-label {
+//      padding-top: 0;
+//      padding-bottom: 0;
+//   }
+// }
+
+// .apex-side-nav .t-Body-nav,
+// .apex-side-nav .t-Body-nav .t-TreeNav {
+//    z-index: 461;  /* Make it appear on top of the page content */
+//    /* Breadcrumb is defined to 460 */
+// }

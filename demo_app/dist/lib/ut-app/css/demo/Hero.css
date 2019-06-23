@@ -1,0 +1,35 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+.dm-Hero { border-bottom: 1px solid rgba(255, 255, 255, 0.25); margin: 1.5rem 0; }
+
+.dm-Hero > h1, .dm-Hero > h2 { text-align: center; margin: 0; }
+
+.dm-Hero > h1 { font-size: 64px; }
+
+.dm-Hero > h1 span { display: block; font-size: 32px; }
+
+.dm-Hero > h2 { font-size: 48px; opacity: .8; }
+
+.dm-Hero > p { font-size: 2rem; line-height: 1.5; }
+
+.dm-Hero > .demo-title-h2 { font-size: 2.8rem; }
+
+.dm-Hero--secondary { margin-bottom: 24px; }
+
+.dm-Hero--secondary > .container { max-width: 80%; margin: 0 auto; }
+
+.dm-Hero-steps { background-color: rgba(0, 0, 0, 0.025); border-radius: 2px; padding: 16px; margin-top: 16px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset; }
+
+.dm-Hero .t-TabsRegion-items { margin-top: 36px; }
+
+p.dm-Hero-steps--slim { font-size: 14px; text-align: center; margin: 32px 0 0 0; padding: 8px; }
+
+.dm-Hero-steps + .t-TabsRegion-items > .a-Region-carouselControl { margin-bottom: 8px; }
+
+.dm-Hero-screenshot .t-Button { display: block; margin: 0 auto; }
+
+.dm-Hero .t-Alert--wizard { max-width: 100%; }
+
+h2.demo-title-h2 { text-align: left; font-weight: bold; }
+
+h3.demo-title-h3 { margin-top: 2.5rem; font-size: 2rem; }

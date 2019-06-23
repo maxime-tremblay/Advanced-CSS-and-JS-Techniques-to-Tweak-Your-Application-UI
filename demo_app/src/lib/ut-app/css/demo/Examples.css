@@ -1,0 +1,42 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+/* ========================================================================== Demo Examples ========================================================================== */
+.dm-Code { background-color: #FFF; border-radius: 2px; border: 1px solid rgba(0, 0, 0, 0.1); font-size: 1.2rem; line-height: 1.6rem; margin: 1.6rem 0; display: block; }
+
+.dm-Code .CodeMirror { font-size: 12px; line-height: 18px; height: 100%; }
+
+/* Doc Report ========================================================================== */
+.dm-Report--doc { background: #FFF; border: 1px solid rgba(0, 0, 0, 0.05); }
+
+.dm-Report--doc th, .dm-Report--doc td { padding: 8px; min-height: 32px; background-color: transparent; border-width: 0 0 1px 0; border-style: solid; border-color: rgba(0, 0, 0, 0.05); }
+
+.dm-Report--doc td { vertical-align: top; }
+
+.dm-Report--doc tr:last-child td { border-bottom-width: 0; }
+
+.dm-Report--doc .class { min-width: 40px; }
+
+.dm-Report--doc .class-desc { color: rgba(0, 0, 0, 0.55); }
+
+.dm-Report--doc .class-desc-inline { width: 48px; text-align: right; }
+
+.dm-Report--doc .breakpoint { display: block; text-align: center; color: rgba(0, 0, 0, 0.55); font-family: 'Menlo', 'Consolas', monospace; font-weight: normal; }
+
+.dm-Report--grid tbody th { text-align: left; font-weight: normal; }
+
+.dm-Report--grid td { text-align: center; }
+
+.dm-Report--grid .display-hidden { color: rgba(0, 0, 0, 0.55); }
+
+.dm-Report--grid .display-visible { color: rgba(0, 0, 0, 0.75); background-color: rgba(59, 170, 44, 0.1) !important; }
+
+/* Styling Classes ========================================================================== */
+.class, .class-value, .class-desc { display: inline-block; font-size: 12px; font-family: 'Menlo', 'Consolas', monospace; }
+
+.class { color: #9C27B0; }
+
+.class.tag { padding: 4px 8px; background-color: #FFF; border-radius: 2px; box-shadow: inset rgba(225, 190, 231, 0.25) 0 0 0 1px; }
+
+.class-value { color: #008676; min-width: 40px; }
+
+.class-var { font-weight: bold; color: #008676; }

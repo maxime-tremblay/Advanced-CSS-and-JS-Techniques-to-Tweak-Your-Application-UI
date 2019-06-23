@@ -1,0 +1,45 @@
+/* ***********************************
+ * Page 1 Specific Styles
+ * Home Page
+ * *********************************** */
+$namespace: page-1;
+
+$image-src: '' !default;
+$image-width: 0px !default;
+$image-height: 0px !default;
+
+@if $is-kscope19 == true {
+    $image-src: '../images/Kscope19/logo.png';
+    $image-width: 350px;
+    $image-height: 162px;
+}
+
+.#{$namespace} {
+    .t-Body-contentInner {
+        @extend %display-flex;
+
+        & > .container {
+            @extend %display-flex;
+
+            & > .row {
+                @extend %display-flex;
+            }
+        }
+    }
+
+    .region-home-layout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-logo {
+        background: url($image-src);
+        width: $image-width;
+        height: $image-height;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        max-width: 60vw;
+    }
+}

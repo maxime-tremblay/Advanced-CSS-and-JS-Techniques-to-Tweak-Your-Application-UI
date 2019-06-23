@@ -1,0 +1,28 @@
+.class,
+.class-value,
+.class-desc {
+    display: inline-block;
+    font-size: 12px; 
+    font-family: 'Menlo', 'Consolas', monospace;
+}
+
+.class {
+    color: #9C27B0;
+}
+
+.class.tag {
+    padding: 4px 8px;
+    background-color: #FFF;
+    border-radius: 2px;
+    box-shadow: inset rgba(225, 190, 231, 0.25) 0 0 0 1px;
+}
+
+.class-value {
+    color: #008676;
+    min-width: 40px;
+}
+
+.class-var {
+    font-weight: bold;
+    color: #008676;
+}

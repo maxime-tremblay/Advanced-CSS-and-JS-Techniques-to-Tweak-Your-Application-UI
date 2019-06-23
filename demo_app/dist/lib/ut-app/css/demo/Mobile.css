@@ -1,0 +1,42 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+/** Oracle Application Express 5.0 Universal Theme - Demonstration Application Media Queries / Mobile Devices */
+@media only screen and (max-width: 768px) { form#wwvFlowForm { min-height: 80vh; }
+  .dm-Home .t-Body-main { margin-top: 0 !important; }
+  .dm-Home .dm-Hero > h1 { font-size: 64px; }
+  .dm-Home .dm-Hero > h1 span { font-size: 20px; }
+  .dm-Home .dm-Hero > h2 { font-size: 32px; }
+  .dm-Home .dm-Hero > h1, .dm-Home .dm-Hero > h2, .dm-Home .dm-Hero > p { text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
+  .dm-Home .dm-Hero { margin-bottom: 16px; padding-bottom: 16px; }
+  .dm-Home .dm-Hero > p { font-size: 16px; margin: 24px auto 0 auto; }
+  .dm-Logo { width: 160px; height: 160px; }
+  .dm-Hero > h1 { font-size: 64px; }
+  .dm-Hero > h2 { font-size: 32px; font-weight: 400; }
+  .dm-Hero > p { font-size: 16px; margin-top: 24px; max-width: 90%; font-weight: 400; }
+  .dm-Hero--primary { padding: 24px 0; }
+  .dm-Hero > p.dm-Hero-steps { margin-top: 12px; padding: 8px; font-size: 1.2rem; }
+  .dm-Icon--page { max-width: 100%; background-size: 100%; margin-bottom: 0; }
+  .dm-Hero .t-TabsRegion-items { min-height: 0 !important; } }
+@media only screen and (max-width: 640px) { form#wwvFlowForm { min-height: 80vh; }
+  .dm-Home .t-Body-main { margin-top: 0 !important; }
+  .dm-Home .dm-Hero > h1 { font-size: 36px; }
+  .dm-Home .dm-Hero > h1 span { font-size: 14px; }
+  .dm-Home .dm-Hero > h2 { font-size: 20px; }
+  .dm-Home .dm-Hero > h1, .dm-Home .dm-Hero > h2, .dm-Home .dm-Hero > p { text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
+  .dm-Home .dm-Hero { margin-bottom: 16px; padding-bottom: 16px; }
+  .dm-Home .dm-Hero > p { font-size: 14px; margin: 24px auto 0 auto; }
+  .dm-Logo { width: 128px; height: 128px; }
+  .dm-GoButton .t-Button { padding: 8px 16px; font-size: 1.6rem; line-height: 2.4rem; font-weight: 400; }
+  .dm-GoButton .t-Button .t-Icon.fa { line-height: 2.4rem; }
+  .dm-Hero > h1 { font-size: 36px; }
+  .dm-Hero > h2 { font-size: 20px; font-weight: 400; }
+  .dm-Hero > p { font-size: 14px; margin-top: 24px; max-width: 100%; font-weight: 400; }
+  .dm-Components .t-Cards li.t-Cards-item { width: 50% !important; float: left !important; clear: none !important; }
+  .dm-Components .t-Cards li.t-Cards-item .t-Card .t-Card-icon { margin: 1.2rem auto 0 auto; width: 96px; height: 96px; }
+  .dm-Components .t-Cards li.t-Cards-item .t-Card .t-Card-icon .t-Icon { width: 96px; height: 96px; }
+  .dm-Components .t-Cards li.t-Cards-item .t-Card .t-Card-titleWrap { margin-top: 0; margin-bottom: 1.2rem; height: 2.4rem; }
+  .dm-Components .t-Cards li.t-Cards-item .t-Card .t-Card-title { font-size: 1.4rem; }
+  .dm-Hero > p.dm-Hero-steps { margin-top: 12px; padding: 8px; font-size: 1.2rem; }
+  .dm-Icon--page { max-width: 100%; background-size: 100%; margin-bottom: 8px; }
+  .dm-Hero .t-TabsRegion-items { min-height: 0 !important; }
+  .dm-ContentWell--buttons .col { margin-bottom: 4px; } }

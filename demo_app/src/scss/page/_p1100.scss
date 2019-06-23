@@ -1,0 +1,62 @@
+/* ***********************************
+ * Page 1000 Specific Styles
+ * Reports Tuning
+ * *********************************** */
+$namespace: page-1100;
+
+.#{$namespace} {
+   %showOnHover {
+      .rowSelector,
+      .showRowHover {
+         opacity: 0;
+         transition: .2s all;
+      }
+ 
+      .js-showCheckbox .rowSelector,
+      .rowSelector:checked {
+         opacity: 1;
+      }
+
+      tr:hover {
+         .showRowHover{
+            opacity: 1;
+         }
+      }
+   }
+
+   %hoverOutline {
+      $rowAccent: #C7E0F4;
+      $rowHovered: darken($rowAccent, 30%);
+
+      tr.rowSelected .t-Report-cell {
+         background-color: $rowAccent;
+      }
+
+      tbody tr {
+         transition: .2s all;
+         outline: 1px solid rgba($rowHovered, 0);
+         
+         &:hover {
+            outline: 1px solid rgba($rowHovered, 1);
+         }
+      }
+   }
+
+   .example-1 {
+      @extend %showOnHover;
+   }
+
+   .example-2 {
+      @extend %showOnHover;
+      @extend %hoverOutline;
+   }
+
+   .example-3 {
+      @extend %showOnHover;
+      @extend %hoverOutline;
+
+      .actionMenu--trigger.is-active {
+         opacity: 1;
+      }
+   }
+}

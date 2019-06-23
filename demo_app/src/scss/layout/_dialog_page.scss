@@ -1,0 +1,11 @@
+/* Large dialog */
+@media only screen and (min-width: 768px) {
+   .t-Dialog-page--lgDialog {
+      min-width: 769px;
+   }
+}
+@media only screen and (min-width: 1024px) {
+   .t-Dialog-page--lgDialog {
+      min-width: 1025px;
+   }
+}

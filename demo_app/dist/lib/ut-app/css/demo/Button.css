@@ -1,0 +1,11 @@
+/* ========================================================================== Icon Library Mixin ========================================================================== */
+/* ========================================================================== Shadows ========================================================================== */
+.dm-GoButton { text-align: center; }
+
+.dm-GoButton .t-Button { padding: 14px 38px; margin: 0 0 1rem 0; font-size: 2.4rem; line-height: 3.2rem; box-shadow: none; background-color: transparent; }
+
+.dm-GoButton .t-Button:focus { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.75) inset !important; }
+
+.dm-GoButton .t-Button:hover { background-color: #efefef; }
+
+.dm-GoButton .t-Button--icon .t-Icon.fa { font-size: 28px; line-height: 3.2rem; vertical-align: top; margin-left: 8px; }

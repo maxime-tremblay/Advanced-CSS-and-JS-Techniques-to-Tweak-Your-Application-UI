@@ -1,0 +1,117 @@
+/* ***********************************
+ * Page 1910 Specific Styles
+ * Selection Using Cards
+ * *********************************** */
+$namespace: page-1910;
+
+.#{$namespace} {
+
+/* Box Shadow and Glow Effect on Hover */
+.t-Cards--Glow .t-Cards .t-Cards-item .t-Card {
+   margin: 15px 25px 20px 5px;
+   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),
+               0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.t-Cards--Glow .t-Cards .t-Cards-item .t-Card:hover {
+   box-shadow: 0 10px 16px 0 rgba(35, 173, 255, 0.2),
+               0 6px 20px 0 rgba(35, 173, 255, 0.19);
+   transition: all 200ms ease-out;
+}
+
+.t-Cards--Glow .t-Card, .t-Cards--Glow .t-Card-wrap {
+   border-radius: 10px;
+}
+
+/* Card Styling - Not Selected */
+.t-Cards-item .t-Card .t-Card-wrap,
+.t-Card-wrap:focus{
+   border: 1px solid rgba(0,0,0,.075);
+}
+
+.t-Cards-item .t-Card-desc .fa {
+   visibility: hidden;
+}
+
+.t-Cards-item .t-Card-desc .displayedText {
+   display: none;
+}
+
+.t-Cards-item .t-Card-desc .hiddenText {
+   display: block;
+}
+
+.t-Cards-item .t-Card-title,
+.t-Cards-item .t-Card-desc .displayedText,
+.t-Cards-item .t-Card-desc .hiddenText,
+.t-Cards-item .t-Card-info {
+   color: rgba(0,0,0,.3)
+}
+
+.t-Cards-item.is-Selected .t-Card-title,
+.t-Cards-item.is-Selected .t-Card-desc .displayedText,
+.t-Cards-item.is-Selected .t-Card-desc .hiddenText,
+.t-Cards-item.is-Selected .t-Card-info {
+   color: rgb(64, 64, 64);
+}
+
+.t-Cards-item.is-Selected .t-Card-desc .fa {
+   color: green;
+   visibility: visible;
+}
+
+.t-Cards-item.is-Selected .t-Card {
+   box-shadow: /*0 5px 8px 0 rgba(0,0,0,0.2),*/
+               0 3px 10px 0 rgba(0,0,0,0.19);
+}
+
+.t-Cards-item.is-Selected .t-Card .t-Card-wrap {
+   border: 1px solid #9e9e9e
+}
+
+.t-Cards-item.is-Selected .t-Card-desc .displayedText {
+   display: block;
+}
+
+.t-Cards-item.is-Selected .t-Card-desc .hiddenText {
+   display: none;
+}
+
+/* Center Card Content */
+.t-Cards-item .t-Card-body {
+   text-align: center;
+   padding: 5px !important;
+}
+
+.t-Cards-item .t-Card-body .t-Card-info {
+   margin-top: 30px;
+}
+
+.fadeIn {
+   @include animation('fadeIn .5s');
+}
+
+.fadeOut {
+   @include animation('fadeOut .5s');
+}
+
+
+@include keyframes(fadeIn) {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 100;
+   }
+}
+
+@include keyframes(fadeOut) {
+   0% {
+      opacity: 100;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+}
