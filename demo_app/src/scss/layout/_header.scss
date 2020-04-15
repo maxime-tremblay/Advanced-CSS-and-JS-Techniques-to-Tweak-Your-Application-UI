@@ -8,6 +8,7 @@ $image-height: 0px !default;
     $image-height: 110px;
 }
 
+@if $is-kscope19 == true {
 $header-image-width: $image-width * $header-height / $image-height;
 
 /* Header - Adds image befoer application title */
@@ -26,4 +27,5 @@ $header-image-width: $image-width * $header-height / $image-height;
     margin-left: -($header-image-width + 10px); /* Move the image to the left so that it's not on top of the text and add some extra margin so that there is space between the image and text */
     top: 0;
     bottom: 0;
+}
 }

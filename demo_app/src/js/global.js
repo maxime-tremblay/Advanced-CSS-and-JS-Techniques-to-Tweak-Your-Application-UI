@@ -54,14 +54,14 @@ var demo = demo || {};
 
     demo.autoDismissSuccessMessage = function () {
         var  page_body_sel      = '#t_PageBody';
-
+        
         //auto hide success messages after 5 seconds
         //Note: The previous name for this API, apex.theme42.configureSuccessMessages, is deprecated and will be removed in a future release.
         apex.theme42.util.configAPEXMsgs({
             autoDismiss: true,
             duration: 5000  // duration is optional (Default is 3000 milliseconds)
         });
-
+        
         $(page_body_sel)
             .addClass('js-autoDismissSuccessMessage');
     };

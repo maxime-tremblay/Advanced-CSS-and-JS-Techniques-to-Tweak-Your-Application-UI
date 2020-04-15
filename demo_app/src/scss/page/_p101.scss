@@ -52,7 +52,14 @@ $namespace: page-101;
             }
         }
 
-
+        .t-Body-wrap {
+            margin: 0;
+        }
+    
+        .t-Login-container {
+            margin: 0 0 0 auto;
+            height: 100vh;
+        }
     }
 
     @include keyframes(showRegister) {

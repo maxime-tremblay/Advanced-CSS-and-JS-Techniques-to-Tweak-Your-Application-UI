@@ -48,6 +48,7 @@ $namespace: page-1910;
    color: rgba(0,0,0,.3)
 }
 
+/* Card Styling - Selected */
 .t-Cards-item.is-Selected .t-Card-title,
 .t-Cards-item.is-Selected .t-Card-desc .displayedText,
 .t-Cards-item.is-Selected .t-Card-desc .hiddenText,
@@ -61,8 +62,7 @@ $namespace: page-1910;
 }
 
 .t-Cards-item.is-Selected .t-Card {
-   box-shadow: /*0 5px 8px 0 rgba(0,0,0,0.2),*/
-               0 3px 10px 0 rgba(0,0,0,0.19);
+   box-shadow: 0 3px 10px 0 rgba(0,0,0,0.19);
 }
 
 .t-Cards-item.is-Selected .t-Card .t-Card-wrap {
@@ -85,33 +85,6 @@ $namespace: page-1910;
 
 .t-Cards-item .t-Card-body .t-Card-info {
    margin-top: 30px;
-}
-
-.fadeIn {
-   @include animation('fadeIn .5s');
-}
-
-.fadeOut {
-   @include animation('fadeOut .5s');
-}
-
-
-@include keyframes(fadeIn) {
-   0% {
-      opacity: 0;
-   }
-   100% {
-      opacity: 100;
-   }
-}
-
-@include keyframes(fadeOut) {
-   0% {
-      opacity: 100;
-   }
-   100% {
-      opacity: 0;
-   }
 }
 
 }

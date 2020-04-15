@@ -25,8 +25,8 @@ $namespace: page-1100;
    }
 
    %hoverOutline {
-      $rowAccent: #C7E0F4;
-      $rowHovered: darken($rowAccent, 30%);
+      $rowAccent: lighten(#dcaa35, 30%);
+      $rowHovered: darken($rowAccent, 30%); // darken($rowAccent, 30%);
 
       tr.rowSelected .t-Report-cell {
          background-color: $rowAccent;

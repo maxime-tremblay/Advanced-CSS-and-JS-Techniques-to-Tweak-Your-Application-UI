@@ -1,10 +1,8 @@
 # Advanced CSS and JS Techniques to Tweak Your Application UI
 
-## Kscope19
 [Demo Application](https://askmax.solutions/ords/f?p=10100)
 
 [Presentation](./Advanced%20CSS%20and%20JS%20Techniques%20to%20Tweak%20Your%20Application%20UI.pdf)
-
 ---
 **NOTE**
 

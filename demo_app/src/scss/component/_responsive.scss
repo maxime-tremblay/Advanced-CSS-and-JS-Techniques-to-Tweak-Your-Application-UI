@@ -1,80 +1,63 @@
 /* ==========================================================================
    Responsive Utility Classes
    ---
-   xs  <=640px
-   sm  640px - 767px
-   md  768px - 1199px
+   xxs  <=640px
+   xs  641px - 767px
+   sm  768px - 991px
+   md  992px - 1199px
    lg  >=  1200px
    ========================================================================== */
 
-/* xs Classes */
-.hidden-xs-up {
-   display: none !important;
+/* CSS From UT */
+.hidden-lg-down,
+.hidden-xxs-up {
+    display: none!important
 }
 
 @media (max-width: 640px) {
-   .hidden-xs-down {
-      display: none !important;
-   }
+    .hidden-xxs-down {
+        display: none!important
+    }
 }
 
-@media (max-width:640px) {
-   .hidden-xs-only {
-      display: none!important
-   }
-}
-
-/* sm Classes */
-@media (min-width: 641px) {
-   .hidden-sm-up {
-      display: none !important;
-   }
+@media (min-width: 1200px) {
+    .hidden-lg-up {
+        display: none!important
+    }
 }
 
 @media (max-width: 767px) {
-   .hidden-sm-down {
-      display: none !important;
-   }
+    .hidden-xs-down {
+        display: none!important
+    }
 }
 
-@media (min-width:641px) and (max-width:767px) {
-   .hidden-sm-only {
-      display: none!important
-   }
+@media (min-width: 641px) {
+    .hidden-xs-up {
+        display:none!important
+    }
 }
 
-/* md Classes */
 @media (min-width: 768px) {
-   .hidden-md-up {
-      display: none !important;
-   }
+    .hidden-sm-up {
+        display:none!important
+    }
+}
+
+@media (max-width: 991px) {
+    .hidden-sm-down {
+        display:none!important
+    }
+}
+
+@media (min-width: 992px) {
+    .hidden-md-up {
+        display:none!important
+    }
 }
 
 @media (max-width: 1199px) {
-   .hidden-md-down {
-      display: none !important;
-   }
-}
-
-@media (min-width:768px) and (max-width:1199px) {
-   .hidden-md-only {
-      display: none!important
-   }
-}
-
-/* lg Classes */
-@media (min-width: 1200px) {
-   .hidden-lg-up {
-      display: none !important;
-   }
-}
-
-.hidden-lg-down {
-   display: none !important;
-}
-
-@media (min-width:1200px) {
-   .hidden-lg-only {
-      display: none!important
-   }
+    .hidden-md-down {
+        display:none!important
+    }
 }

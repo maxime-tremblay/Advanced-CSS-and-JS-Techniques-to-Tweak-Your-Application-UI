@@ -15,6 +15,7 @@ $image-height: 0px !default;
 }
 
 .#{$namespace} {
+    /*
     .t-Body-contentInner {
         @extend %display-flex;
 
@@ -23,23 +24,51 @@ $image-height: 0px !default;
 
             & > .row {
                 @extend %display-flex;
+
+                & > .col {
+                    @extend %display-flex;
+                }
             }
         }
-    }
+    }*/
 
     .region-home-layout {
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: calc(100vh - 48px - 73px - 32px);
+                    /* header 48px, footer 73px, 16px padding top and bottom */
     }
 
-    .home-logo {
-        background: url($image-src);
-        width: $image-width;
-        height: $image-height;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        max-width: 60vw;
+    @if $is-kscope19 == true {
+        .home-logo {
+            background: url($image-src);
+            width: $image-width;
+            height: $image-height;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            max-width: 60vw;
+        }
+        .home-title{
+            display: none;
+        }
     }
+
+    @if $is-apexathome == true {
+        .home-logo {
+            display: none;
+        }
+        .home-title{
+            font-size: 7rem;
+        }
+    }
+}
+
+
+.page-1 .region-home-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 48px - 73px - 32px);
 }

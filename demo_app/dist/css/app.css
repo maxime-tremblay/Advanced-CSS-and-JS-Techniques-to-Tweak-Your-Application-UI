@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /* Base */
-.page-1 .t-Body-contentInner, .page-1 .t-Body-contentInner > .container, .page-1 .t-Body-contentInner > .container > .row {
-  display: flex; }
-
 /* Components */
 .width–noGrid .col.t-Form-labelContainer {
   width: auto; }
@@ -30,6 +27,15 @@
 .class-var {
   font-weight: bold;
   color: #008676; }
+
+.code-toolbar pre[class*="language-"] > code {
+  border-left: 10px solid #F9BC00;
+  box-shadow: -1px 0px 0px 0px #F9BC00, 0px 0px 0px 1px #dfdfdf;
+  background-color: #fdfdfd;
+  background-image: linear-gradient(transparent 50%, rgba(249, 188, 209, 0.04) 50%);
+  background-size: 3em 3em;
+  background-origin: content-box;
+  background-attachment: local; }
 
 /* Layouts */
 .t-PageBody--login.t-PageBody--backgroundImage {
@@ -168,24 +174,6 @@
     .t-PageBody--overlayNav .t-Body-nav {
       width: 100%; } }
 
-/* Header - Adds image befoer application title */
-.t-Header-logo-link > span {
-  padding-left: 167.72727px;
-  /* Move title to the right so that it's not under the image */ }
-
-.t-Header-logo-link > span:before {
-  position: absolute;
-  content: "";
-  background: url("../images/Kscope19/header.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 152.72727px;
-  margin-left: -162.72727px;
-  /* Move the image to the left so that it's not on top of the text and add some extra margin so that there is space between the image and text */
-  top: 0;
-  bottom: 0; }
-
 .t-Footer .t-Footer-body {
   display: flex;
   align-items: center;
@@ -251,19 +239,39 @@ footer .t-Footer-srMode {
  * Page 1 Specific Styles
  * Home Page
  * *********************************** */
+.page-1 {
+  /*
+    .t-Body-contentInner {
+        @extend %display-flex;
+
+        & > .container {
+            @extend %display-flex;
+
+            & > .row {
+                @extend %display-flex;
+
+                & > .col {
+                    @extend %display-flex;
+                }
+            }
+        }
+    }*/ }
+  .page-1 .region-home-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 48px - 73px - 32px);
+    /* header 48px, footer 73px, 16px padding top and bottom */ }
+  .page-1 .home-logo {
+    display: none; }
+  .page-1 .home-title {
+    font-size: 7rem; }
+
 .page-1 .region-home-layout {
   display: flex;
   align-items: center;
-  justify-content: center; }
-
-.page-1 .home-logo {
-  background: url("../images/Kscope19/logo.png");
-  width: 350px;
-  height: 162px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  max-width: 60vw; }
+  justify-content: center;
+  min-height: calc(100vh - 48px - 73px - 32px); }
 
 /* ***********************************
  * Page 101 Specific Styles
@@ -300,6 +308,11 @@ footer .t-Footer-srMode {
   .page-101 .t-Region--loginWrapper.anim-showLogin .t-Region--login {
     -webkit-animation: showLogin 1s .2s 1 ease-in-out forwards  !important;
     animation: showLogin 1s .2s 1 ease-in-out forwards  !important; }
+  .page-101 .t-Region--loginWrapper .t-Body-wrap {
+    margin: 0; }
+  .page-101 .t-Region--loginWrapper .t-Login-container {
+    margin: 0 0 0 auto;
+    height: 100vh; }
 
 @-webkit-keyframes showRegister {
   0% {
@@ -359,7 +372,7 @@ footer .t-Footer-srMode {
 
 /* ***********************************
  * Page 1000 Specific Styles
- * Button with sliding icon on hover
+ * Success Message
  * *********************************** */
 .page-1000 {
   /* Adding progress indicator */ }
@@ -413,20 +426,20 @@ footer .t-Footer-srMode {
   opacity: 1; }
 
 .page-1100 .example-2 tr.rowSelected .t-Report-cell, .page-1100 .example-3 tr.rowSelected .t-Report-cell {
-  background-color: #C7E0F4; }
+  background-color: #f3e1b7; }
 
 .page-1100 .example-2 tbody tr, .page-1100 .example-3 tbody tr {
   transition: .2s all;
-  outline: 1px solid rgba(71, 153, 219, 0); }
+  outline: 1px solid rgba(220, 170, 53, 0); }
   .page-1100 .example-2 tbody tr:hover, .page-1100 .example-3 tbody tr:hover {
-    outline: 1px solid #4799db; }
+    outline: 1px solid #dcaa35; }
 
 .page-1100 .example-3 .actionMenu--trigger.is-active {
   opacity: 1; }
 
 /* ***********************************
- * Page 1000 Specific Styles
- * Button with sliding icon on hover
+ * Page 1210 Specific Styles
+ * Bootstrap Like Navbar
  * *********************************** */
 @media (min-width: 640px) {
   .page-1210 .t-NavigationBar-menu .a-Menu-item:nth-child(1),
@@ -471,7 +484,7 @@ footer .t-Footer-srMode {
 
 /* ***********************************
  * Page 1400 Specific Styles
- * Region in Navbar
+ * Flip Region
  * *********************************** */
 .page-1500 .bio--desc {
   display: flex;
@@ -514,6 +527,7 @@ footer .t-Footer-srMode {
 .page-1910 {
   /* Box Shadow and Glow Effect on Hover */
   /* Card Styling - Not Selected */
+  /* Card Styling - Selected */
   /* Center Card Content */ }
   .page-1910 .t-Cards--Glow .t-Cards .t-Cards-item .t-Card {
     margin: 15px 25px 20px 5px;
@@ -558,47 +572,17 @@ footer .t-Footer-srMode {
     padding: 5px !important; }
   .page-1910 .t-Cards-item .t-Card-body .t-Card-info {
     margin-top: 30px; }
-  .page-1910 .fadeIn {
-    -webkit-animation: fadeIn .5s;
-    animation: fadeIn .5s; }
-  .page-1910 .fadeOut {
-    -webkit-animation: fadeOut .5s;
-    animation: fadeOut .5s; }
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 100; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 100; } }
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 100; }
-  100% {
-    opacity: 0; } }
-
-@keyframes fadeOut {
-  0% {
-    opacity: 100; }
-  100% {
-    opacity: 0; } }
 
 /* ***********************************
- * Page 1000 Specific Styles
- * Button with sliding icon on hover
+ * Page 3110
+ * Responsive Utilities - Examples
  * *********************************** */
 .page-3110 .t-Body-contentInner {
   max-width: 100%; }
 
 /* ***********************************
- * Page 1000 Specific Styles
- * Button with sliding icon on hover
+ * Page 3210
+ * Grid Layout - Examples
  * *********************************** */
 .page-3210 .t-Body-contentInner {
   max-width: 100%; }
