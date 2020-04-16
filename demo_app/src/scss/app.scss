@@ -9,13 +9,13 @@
 @import "component/_highlight";
 
 /* Layouts */
+@import "layout/_dialog_page";
+@import "layout/_footer";
+@import "layout/_header";
 @import "layout/_login_page";
 @import "layout/_navigation";
-@import "layout/_standard_page";
-@import "layout/_dialog_page";
 @import "layout/_overlay-sidemenu";
-@import "layout/_header";
-@import "layout/_footer";
+@import "layout/_standard_page";
 
 /* Vendor */
 

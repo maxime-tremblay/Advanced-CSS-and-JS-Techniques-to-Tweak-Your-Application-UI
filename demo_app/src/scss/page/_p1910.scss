@@ -6,23 +6,6 @@ $namespace: page-1910;
 
 .#{$namespace} {
 
-/* Box Shadow and Glow Effect on Hover */
-.t-Cards--Glow .t-Cards .t-Cards-item .t-Card {
-   margin: 15px 25px 20px 5px;
-   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),
-               0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.t-Cards--Glow .t-Cards .t-Cards-item .t-Card:hover {
-   box-shadow: 0 10px 16px 0 rgba(35, 173, 255, 0.2),
-               0 6px 20px 0 rgba(35, 173, 255, 0.19);
-   transition: all 200ms ease-out;
-}
-
-.t-Cards--Glow .t-Card, .t-Cards--Glow .t-Card-wrap {
-   border-radius: 10px;
-}
-
 /* Card Styling - Not Selected */
 .t-Cards-item .t-Card .t-Card-wrap,
 .t-Card-wrap:focus{
@@ -30,7 +13,8 @@ $namespace: page-1910;
 }
 
 .t-Cards-item .t-Card-desc .fa {
-   visibility: hidden;
+   opacity: 0;
+   transition: .2s all;
 }
 
 .t-Cards-item .t-Card-desc .displayedText {
@@ -58,7 +42,7 @@ $namespace: page-1910;
 
 .t-Cards-item.is-Selected .t-Card-desc .fa {
    color: green;
-   visibility: visible;
+   opacity: 1;
 }
 
 .t-Cards-item.is-Selected .t-Card {

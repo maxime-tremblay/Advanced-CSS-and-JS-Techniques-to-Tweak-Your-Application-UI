@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* Base */
+.page-1 .t-Body-contentInner, .page-1 .t-Body-contentInner > .container, .page-1 .t-Body-contentInner > .container > .row, .page-1 .t-Body-contentInner > .container > .row > .col {
+  display: flex; }
+
 /* Components */
 .width–noGrid .col.t-Form-labelContainer {
   width: auto; }
@@ -38,6 +41,80 @@
   background-attachment: local; }
 
 /* Layouts */
+/* Large dialog */
+@media only screen and (min-width: 768px) {
+  .t-Dialog-page--lgDialog {
+    min-width: 769px; } }
+
+@media only screen and (min-width: 1024px) {
+  .t-Dialog-page--lgDialog {
+    min-width: 1025px; } }
+
+.t-Footer .t-Footer-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .t-Footer .t-Footer-body {
+    justify-content: center; } }
+
+.t-Footer .contact-wrap {
+  display: flex;
+  align-items: center; }
+  .t-Footer .contact-wrap .copyright {
+    flex: 0 0 auto; }
+  .t-Footer .contact-wrap .contact {
+    display: flex;
+    align-items: center; }
+    .t-Footer .contact-wrap .contact .contact-elem {
+      margin-left: 10px; }
+
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); } }
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); } }
+
+.t-Footer-topButton:hover .a-Icon {
+  -webkit-animation: slide-up 2s 0s linear infinite;
+  animation: slide-up 2s 0s linear infinite;
+  opacity: 0; }
+
+/* Apex 5.1 Hide Screen Reader and Customize Links */
+footer .t-Footer-customize,
+footer .t-Footer-srMode {
+  display: none; }
+
+.t-Header .apex-logo-img {
+  border-radius: 25%; }
+
+.t-Header .apex-logo-text {
+  text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1); }
+
 .t-PageBody--login.t-PageBody--backgroundImage {
   background: transparent; }
   .t-PageBody--login.t-PageBody--backgroundImage:before, .t-PageBody--login.t-PageBody--backgroundImage:after {
@@ -131,24 +208,6 @@
   color: #26cbff; }
 
 /* Navigation Menu - Fixes the submenu icon height */
-/* IE11 Body min height fix */
-.t-Body-main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; }
-
-.t-Body-content {
-  min-height: calc(100vh - 48px); }
-
-/* Large dialog */
-@media only screen and (min-width: 768px) {
-  .t-Dialog-page--lgDialog {
-    min-width: 769px; } }
-
-@media only screen and (min-width: 1024px) {
-  .t-Dialog-page--lgDialog {
-    min-width: 1025px; } }
-
 .t-PageBody--overlayNav {
   /*
     .t-Button.t-Button--headerTree {
@@ -174,64 +233,14 @@
     .t-PageBody--overlayNav .t-Body-nav {
       width: 100%; } }
 
-.t-Footer .t-Footer-body {
+/* IE11 Body min height fix */
+.t-Body-main {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-direction: column;
+  flex-grow: 1; }
 
-@media (max-width: 640px) {
-  .t-Footer .t-Footer-body {
-    justify-content: center; } }
-
-.t-Footer .contact-wrap {
-  display: flex;
-  align-items: center; }
-  .t-Footer .contact-wrap .copyright {
-    flex: 0 0 auto; }
-  .t-Footer .contact-wrap .contact {
-    display: flex;
-    align-items: center; }
-    .t-Footer .contact-wrap .contact .contact-elem {
-      margin-left: 10px; }
-
-@-webkit-keyframes slide-up {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px); }
-  50% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px); } }
-
-@keyframes slide-up {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px); }
-  50% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px); } }
-
-.t-Footer-topButton:hover .a-Icon {
-  -webkit-animation: slide-up 2s 0s linear infinite;
-  animation: slide-up 2s 0s linear infinite;
-  opacity: 0; }
-
-/* Apex 5.1 Hide Screen Reader and Customize Links */
-footer .t-Footer-customize,
-footer .t-Footer-srMode {
-  display: none; }
+.t-Body-content {
+  min-height: calc(100vh - 48px); }
 
 /* Vendor */
 /* Page Specific */
@@ -239,33 +248,19 @@ footer .t-Footer-srMode {
  * Page 1 Specific Styles
  * Home Page
  * *********************************** */
-.page-1 {
-  /*
-    .t-Body-contentInner {
-        @extend %display-flex;
+.page-1 .region-home-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 48px - 73px - 32px);
+  /* header 48px, footer 73px, 16px padding top and bottom */ }
 
-        & > .container {
-            @extend %display-flex;
+.page-1 .home-logo {
+  display: none; }
 
-            & > .row {
-                @extend %display-flex;
-
-                & > .col {
-                    @extend %display-flex;
-                }
-            }
-        }
-    }*/ }
-  .page-1 .region-home-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 48px - 73px - 32px);
-    /* header 48px, footer 73px, 16px padding top and bottom */ }
-  .page-1 .home-logo {
-    display: none; }
-  .page-1 .home-title {
-    font-size: 7rem; }
+.page-1 .home-title {
+  font-size: 7rem;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
 .page-1 .region-home-layout {
   display: flex;
@@ -525,23 +520,15 @@ footer .t-Footer-srMode {
  * Selection Using Cards
  * *********************************** */
 .page-1910 {
-  /* Box Shadow and Glow Effect on Hover */
   /* Card Styling - Not Selected */
   /* Card Styling - Selected */
   /* Center Card Content */ }
-  .page-1910 .t-Cards--Glow .t-Cards .t-Cards-item .t-Card {
-    margin: 15px 25px 20px 5px;
-    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-  .page-1910 .t-Cards--Glow .t-Cards .t-Cards-item .t-Card:hover {
-    box-shadow: 0 10px 16px 0 rgba(35, 173, 255, 0.2), 0 6px 20px 0 rgba(35, 173, 255, 0.19);
-    transition: all 200ms ease-out; }
-  .page-1910 .t-Cards--Glow .t-Card, .page-1910 .t-Cards--Glow .t-Card-wrap {
-    border-radius: 10px; }
   .page-1910 .t-Cards-item .t-Card .t-Card-wrap,
   .page-1910 .t-Card-wrap:focus {
     border: 1px solid rgba(0, 0, 0, 0.075); }
   .page-1910 .t-Cards-item .t-Card-desc .fa {
-    visibility: hidden; }
+    opacity: 0;
+    transition: .2s all; }
   .page-1910 .t-Cards-item .t-Card-desc .displayedText {
     display: none; }
   .page-1910 .t-Cards-item .t-Card-desc .hiddenText {
@@ -558,7 +545,7 @@ footer .t-Footer-srMode {
     color: #404040; }
   .page-1910 .t-Cards-item.is-Selected .t-Card-desc .fa {
     color: green;
-    visibility: visible; }
+    opacity: 1; }
   .page-1910 .t-Cards-item.is-Selected .t-Card {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.19); }
   .page-1910 .t-Cards-item.is-Selected .t-Card .t-Card-wrap {
