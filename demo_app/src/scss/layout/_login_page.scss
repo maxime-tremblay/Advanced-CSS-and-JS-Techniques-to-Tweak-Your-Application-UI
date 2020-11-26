@@ -1,5 +1,5 @@
 .t-PageBody--login {
-    //Image Background
+    /* Back ground Image */
     &.t-PageBody--backgroundImage{
         background: transparent;
 
@@ -12,12 +12,14 @@
             width: 100%;
             content: "";
         }
-        //adds a transparent white layer above the image
+
+        /* adds a transparent white layer above the image */
         &:before {
             background: rgba(255,255,255,.5);
             z-index: -1;
         }
-        //background image
+
+        /* background image */
         &:after {
             background: url('../images/login-bg.jpg');
             background-size: cover;
@@ -25,12 +27,13 @@
         }
     }
 
-
+    /* Login an register Regions base styles */
     .t-Login-region {
         z-index: 10;
         position: relative;
     }
 
+    /* changes the animation so that the login container slides down */
     .t-Alert.login-info {
         @include animation('animSlideDown 1s 1s 1 ease-in-out forwards');
         z-index: 5;
@@ -38,6 +41,7 @@
         position: relative;
     }
 
+    /* Change the icon to an image */
     .t-Login-logo {
         background-image: url('../images/code_icon.png');
         background-size: contain;
@@ -50,17 +54,6 @@
     0% {
         transform: translateY(-100%);
         opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@include keyframes(fadeIn) {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
     }
     100% {
         transform: translateY(0);

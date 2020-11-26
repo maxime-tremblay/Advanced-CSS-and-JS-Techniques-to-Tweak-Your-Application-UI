@@ -1,12 +1,12 @@
-@charset "UTF-8";
 /* Base */
 .page-1 .t-Body-contentInner, .page-1 .t-Body-contentInner > .container, .page-1 .t-Body-contentInner > .container > .row, .page-1 .t-Body-contentInner > .container > .row > .col {
   display: flex; }
 
+/* Nothing here yet */
 /* Components */
-.width–noGrid .col.t-Form-labelContainer {
-  width: auto; }
-
+/* Nothing here yet */
+/* Nothing here yet */
+/* Code highlighting styling */
 .class,
 .class-value,
 .class-desc {
@@ -41,15 +41,17 @@
   background-attachment: local; }
 
 /* Layouts */
-/* Large dialog */
+/* Small and media screens will display a smaller dialog */
 @media only screen and (min-width: 768px) {
   .t-Dialog-page--lgDialog {
     min-width: 769px; } }
 
+/* Larger screen will display a larger dialog */
 @media only screen and (min-width: 1024px) {
   .t-Dialog-page--lgDialog {
     min-width: 1025px; } }
 
+/* Footer stlying to display evertyhing on one line */
 .t-Footer .t-Footer-body {
   display: flex;
   align-items: center;
@@ -70,6 +72,12 @@
     align-items: center; }
     .t-Footer .contact-wrap .contact .contact-elem {
       margin-left: 10px; }
+
+/* Go to Top Icon Animation */
+.t-Footer-topButton:hover .a-Icon {
+  -webkit-animation: slide-up 2s 0s linear infinite;
+  animation: slide-up 2s 0s linear infinite;
+  opacity: 0; }
 
 @-webkit-keyframes slide-up {
   0% {
@@ -99,55 +107,51 @@
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px); } }
 
-.t-Footer-topButton:hover .a-Icon {
-  -webkit-animation: slide-up 2s 0s linear infinite;
-  animation: slide-up 2s 0s linear infinite;
-  opacity: 0; }
+.t-Header {
+  /* Add rounded border to the header image */
+  /* Add some shadow effect to the application's title */ }
+  .t-Header .apex-logo-img {
+    border-radius: 25%; }
+  .t-Header .apex-logo-text {
+    text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1); }
 
-/* Apex 5.1 Hide Screen Reader and Customize Links */
-footer .t-Footer-customize,
-footer .t-Footer-srMode {
-  display: none; }
-
-.t-Header .apex-logo-img {
-  border-radius: 25%; }
-
-.t-Header .apex-logo-text {
-  text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1); }
-
-.t-PageBody--login.t-PageBody--backgroundImage {
-  background: transparent; }
-  .t-PageBody--login.t-PageBody--backgroundImage:before, .t-PageBody--login.t-PageBody--backgroundImage:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    content: ""; }
-  .t-PageBody--login.t-PageBody--backgroundImage:before {
-    background: rgba(255, 255, 255, 0.5);
-    z-index: -1; }
-  .t-PageBody--login.t-PageBody--backgroundImage:after {
-    background: url("../images/login-bg.jpg");
-    background-size: cover;
-    z-index: -2; }
-
-.t-PageBody--login .t-Login-region {
-  z-index: 10;
-  position: relative; }
-
-.t-PageBody--login .t-Alert.login-info {
-  -webkit-animation: animSlideDown 1s 1s 1 ease-in-out forwards;
-  animation: animSlideDown 1s 1s 1 ease-in-out forwards;
-  z-index: 5;
-  opacity: 0;
-  position: relative; }
-
-.t-PageBody--login .t-Login-logo {
-  background-image: url("../images/code_icon.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; }
+.t-PageBody--login {
+  /* Back ground Image */
+  /* Login an register Regions base styles */
+  /* changes the animation so that the login container slides down */
+  /* Change the icon to an image */ }
+  .t-PageBody--login.t-PageBody--backgroundImage {
+    background: transparent;
+    /* adds a transparent white layer above the image */
+    /* background image */ }
+    .t-PageBody--login.t-PageBody--backgroundImage:before, .t-PageBody--login.t-PageBody--backgroundImage:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: ""; }
+    .t-PageBody--login.t-PageBody--backgroundImage:before {
+      background: rgba(255, 255, 255, 0.5);
+      z-index: -1; }
+    .t-PageBody--login.t-PageBody--backgroundImage:after {
+      background: url("../images/login-bg.jpg");
+      background-size: cover;
+      z-index: -2; }
+  .t-PageBody--login .t-Login-region {
+    z-index: 10;
+    position: relative; }
+  .t-PageBody--login .t-Alert.login-info {
+    -webkit-animation: animSlideDown 1s 1s 1 ease-in-out forwards;
+    animation: animSlideDown 1s 1s 1 ease-in-out forwards;
+    z-index: 5;
+    opacity: 0;
+    position: relative; }
+  .t-PageBody--login .t-Login-logo {
+    background-image: url("../images/code_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
 
 @-webkit-keyframes animSlideDown {
   0% {
@@ -164,26 +168,6 @@ footer .t-Footer-srMode {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
     opacity: 1; }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; } }
-
-@-webkit-keyframes fadeIn {
-  0% {
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  0% {
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-    opacity: 0; }
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -207,19 +191,19 @@ footer .t-Footer-srMode {
   animation: pulse 2s linear infinite;
   color: #26cbff; }
 
-/* Navigation Menu - Fixes the submenu icon height */
 .t-PageBody--overlayNav {
-  /*
-    .t-Button.t-Button--headerTree {
-        display: inline-block;
-    }
-*/ }
+  /* Force title to the full width of the page */
+  /* When collapse move menu out of the viewport */
+  /* When expanded move menu on left of the screen */
+  /* For smaller screen make the menu fullscreen */ }
   .t-PageBody--overlayNav .t-Body-nav {
     display: block;
     position: fixed;
     top: 48px;
+    /* Update to your header's height */
     bottom: 0;
-    z-index: 1000; }
+    z-index: 1000;
+    /* Make sure it shows above everything else */ }
   .t-PageBody--overlayNav .t-TreeNav {
     height: 100%; }
   .t-PageBody--overlayNav .t-Body-title {
@@ -233,15 +217,6 @@ footer .t-Footer-srMode {
     .t-PageBody--overlayNav .t-Body-nav {
       width: 100%; } }
 
-/* IE11 Body min height fix */
-.t-Body-main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; }
-
-.t-Body-content {
-  min-height: calc(100vh - 48px); }
-
 /* Vendor */
 /* Page Specific */
 /* ***********************************
@@ -250,6 +225,7 @@ footer .t-Footer-srMode {
  * *********************************** */
 .page-1 .region-home-layout {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 48px - 73px - 32px);
@@ -260,13 +236,11 @@ footer .t-Footer-srMode {
 
 .page-1 .home-title {
   font-size: 7rem;
+  line-height: 8rem;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
-.page-1 .region-home-layout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 48px - 73px - 32px); }
+.page-1 .home-subtitle {
+  margin-top: 10rem; }
 
 /* ***********************************
  * Page 101 Specific Styles
@@ -559,6 +533,51 @@ footer .t-Footer-srMode {
     padding: 5px !important; }
   .page-1910 .t-Cards-item .t-Card-body .t-Card-info {
     margin-top: 30px; }
+
+/* ***********************************
+ * Page 2100
+ * Dialog Animation - Examples
+ * *********************************** */
+.page-2100 .ui-dialog.app-dialog--pullOutRight {
+  outline: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  height: 100% !important;
+  max-height: 100vh !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  max-width: 97vw;
+  border-radius: 0 !important;
+  -webkit-animation: anim-dialogPullOutRightOpen .4s ease 1!important;
+  animation: anim-dialogPullOutRightOpen .4s ease 1!important; }
+
+@-webkit-keyframes anim-dialogPullOutRightOpen {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  0.01% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes anim-dialogPullOutRightOpen {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  0.01% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
 
 /* ***********************************
  * Page 3110

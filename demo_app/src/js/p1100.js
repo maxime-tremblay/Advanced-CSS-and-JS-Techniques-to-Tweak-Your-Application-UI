@@ -7,13 +7,13 @@ demo.page1100 = {};
 
 (function(curPage, $){
     "use strict";
-    var l_rowSelectedClass      = 'rowSelected',
+    let l_rowSelectedClass      = 'rowSelected',
         l_reportShowCheckbox    = 'js-showCheckbox',
         l_checkbox_sel          = '.rowSelector',
         l_actionMenuTrigger_sel = '.actionMenu--trigger',
         l_actionMenu_sel        = '.actionMenu';
 
-    var menu$ = $("<div id='actionsMenu'></div>");
+    let menu$ = $("<div id='actionsMenu'></div>");
     
     curPage.initReportMenu = function() {
         $("body").append(menu$);
@@ -21,8 +21,8 @@ demo.page1100 = {};
         //get tjhe items and generate the menu content
         menu$.menu({
             asyncFetchMenu: function( menu, callback ) {
-                var triggeringElement = $(event.currentTarget);
-                var promise = apex.server.process( "menu_init", {x01: triggeringElement.data('empno') });
+                let triggeringElement = $(event.currentTarget);
+                let promise = apex.server.process( "menu_init", {x01: triggeringElement.data('empno') });
 
                 promise.done( function( data ) {
                     // use data to populate menu.items
@@ -35,7 +35,7 @@ demo.page1100 = {};
        
         // toggle the active state and show the menu
         $(l_actionMenuTrigger_sel).on('click', function() {
-            var target$,
+            let target$,
                 pos;
             
             // set active
@@ -60,7 +60,7 @@ demo.page1100 = {};
     $( function() {
         if (demo.isCurrentPage(1100)) {
             $('.example-1 ' + l_checkbox_sel + ', .example-2 ' + l_checkbox_sel + ', .example-3 ' + l_checkbox_sel).change(function () {
-                var report$    = $(this).closest('.t-Report'),
+                let report$    = $(this).closest('.t-Report'),
                     row$       = $(this).closest('tr'),
                     checkedCnt = report$.find(l_checkbox_sel + ':checked').length;
                 

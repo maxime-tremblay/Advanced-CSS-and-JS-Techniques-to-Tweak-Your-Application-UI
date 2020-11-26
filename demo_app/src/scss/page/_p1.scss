@@ -4,16 +4,6 @@
  * *********************************** */
 $namespace: page-1;
 
-$image-src: '' !default;
-$image-width: 0px !default;
-$image-height: 0px !default;
-
-@if $is-kscope19 == true {
-    $image-src: '../images/Kscope19/logo.png';
-    $image-width: 350px;
-    $image-height: 162px;
-}
-
 .#{$namespace} {
     .t-Body-contentInner {
         @extend %display-flex;
@@ -33,55 +23,35 @@ $image-height: 0px !default;
 
     .region-home-layout {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: calc(100vh - 48px - 73px - 32px);
+        min-height: calc(100vh - #{$header-height} - 73px - 32px);
                     /* header 48px, footer 73px, 16px padding top and bottom */
     }
 
-    @if $is-kscope19 == true {
-        .home-logo {
-            background: url($image-src);
-            width: $image-width;
-            height: $image-height;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            max-width: 60vw;
-        }
-
-        .home-title{
-            display: none;
-        }
+    .home-logo {
+        display: none;
+    }
+    
+    .home-title{
+        font-size: 7rem;
+        line-height: 8rem;
+        text-shadow: 0 1px 0 #ccc, 
+                        0 2px 0 #c9c9c9,
+                        0 3px 0 #bbb,
+                        0 4px 0 #b9b9b9,
+                        0 5px 0 #aaa,
+                        0 6px 1px rgba(0,0,0,.1),
+                        0 0 5px rgba(0,0,0,.1),
+                        0 1px 3px rgba(0,0,0,.3),
+                        0 3px 5px rgba(0,0,0,.2),
+                        0 5px 10px rgba(0,0,0,.25),
+                        0 10px 10px rgba(0,0,0,.2),
+                        0 20px 20px rgba(0,0,0,.15);
     }
 
-    @if $is-apexathome == true {
-        .home-logo {
-            display: none;
-        }
-        
-        .home-title{
-            font-size: 7rem;
-            text-shadow: 0 1px 0 #ccc, 
-                         0 2px 0 #c9c9c9,
-                         0 3px 0 #bbb,
-                         0 4px 0 #b9b9b9,
-                         0 5px 0 #aaa,
-                         0 6px 1px rgba(0,0,0,.1),
-                         0 0 5px rgba(0,0,0,.1),
-                         0 1px 3px rgba(0,0,0,.3),
-                         0 3px 5px rgba(0,0,0,.2),
-                         0 5px 10px rgba(0,0,0,.25),
-                         0 10px 10px rgba(0,0,0,.2),
-                         0 20px 20px rgba(0,0,0,.15);
-        }
+    .home-subtitle {
+        margin-top: 10rem;
     }
-}
-
-
-.page-1 .region-home-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 48px - 73px - 32px);
 }

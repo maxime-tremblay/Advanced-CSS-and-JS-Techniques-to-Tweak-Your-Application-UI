@@ -6,7 +6,7 @@ var demo = demo || {};
 demo.page1500 = {};
 
 (function(curPage, $){
-    var flipContainer_sel = '.flip-container',
+    let flipContainer_sel = '.flip-container',
         front_sel         = '.front',
         back_sel          = '.back',
         flipTrigger_sel   = '.flipRegion--trigger';
@@ -25,15 +25,15 @@ demo.page1500 = {};
     function _fixHeight() {
         //For all the flip regions
         $(flipContainer_sel).each(function() {
-            var region$ = $(this);
+            let region$ = $(this);
 
             // Get the front and back content height
-            var flipRegionContentHeight = region$.find(front_sel + ',' + back_sel).map(function(){
+            let flipRegionContentHeight = region$.find(front_sel + ',' + back_sel).map(function(){
                 return $(this).children('.t-Region-bodyWrap').outerHeight();
             }).get();
 
             // Get the tallest region
-            var lMaxHeight = Math.max.apply(null, flipRegionContentHeight);
+            let lMaxHeight = Math.max.apply(null, flipRegionContentHeight);
 
             // Set the front and back height so that everything shows
             region$.find(front_sel + ',' + back_sel).each(function(){

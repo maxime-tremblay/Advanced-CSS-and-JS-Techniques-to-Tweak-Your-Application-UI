@@ -14,7 +14,7 @@ demo.page1800 = {};
         if ( !message ) {
             message = 'No Message to Display.';
         }
-    
+        
         $('<div></div>').html( message ).dialog({
             title: title,
             resizable: false,

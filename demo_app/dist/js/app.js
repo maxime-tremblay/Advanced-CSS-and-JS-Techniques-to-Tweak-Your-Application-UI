@@ -56,7 +56,7 @@ var demo = demo || {};
         var  page_body_sel      = '#t_PageBody';
         
         //auto hide success messages after 5 seconds
-        //Note: The previous name for this API, apex.theme42.configureSuccessMessages, is deprecated and will be removed in a future release.
+        //Note: The previous name for this API, apex.theme42.configureSuccessMessages, was deprecated in APEX 18.2 and will be removed in a future release.
         apex.theme42.util.configAPEXMsgs({
             autoDismiss: true,
             duration: 5000  // duration is optional (Default is 3000 milliseconds)
@@ -148,7 +148,7 @@ demo.page101 = {};
 (function(curPage, $){
     "use strict";
 
-    var l_affectedRegionSel = '.t-Region--loginWrapper',
+    let l_affectedRegionSel = '.t-Region--loginWrapper',
         l_loginAnim = 'anim-showLogin',
         l_registerAnim = 'anim-showRegister',
         l_registerState = 'is-register',
@@ -175,48 +175,6 @@ demo.page101 = {};
             $(l_affectedRegionSel).removeClass(l_registerAnim);
         }, l_animLength + l_animDelay);
     };
-
-    var l_grid_class = 'grid',
-        l_grid_item_class = 'grid__item',
-        l_grid_html = '<div class="' + l_grid_class + '">' +
-                         '<div class="' + l_grid_item_class + '" style="--span:2; --colStart:14; --rowStart:5; --blur:1px;"></div>' +
-                         '<div class="' + l_grid_item_class + '" style="--span:2; --colStart:9; --rowStart:8; --blur:9px;"></div>' +
-                         '<div class="' + l_grid_item_class + '" style="--span:6; --colStart:2; --rowStart:2; --blur:3px;"></div>' +
-                         '<div class="' + l_grid_item_class + '" style="--span:2; --colStart:4; --rowStart:4; --blur:1px;"></div>' +
-                         '<div class="' + l_grid_item_class + '" style="--span:4; --colStart:1; --rowStart:4; --blur:8px;"></div>' +
-                         '<div class="' + l_grid_item_class + '" style="--span:6; --colStart:4; --rowStart:3; --blur:5px;"></div>' +
-                         '<div class="' + l_grid_item_class + '" style="--span:5; --colStart:11; --rowStart:1; --blur:2px;"></div>' +
-                      '</div>';
-    
-    function _addGridContainer(){
-        $('body').append(l_grid_html);
-    }
-    
-    function _removeGridContainer(){
-        $('.' + l_grid_class).remove();
-    }
-    
-    curPage.changeBackground = function (){
-        var l_className = 't-Region--flexBody',
-            l_backgroundClass = ['t-PageBody--backgroundGradient','t-PageBody--backgroundGrid','t-PageBody--backgroundImage'],
-            l_toggleItem = 'P101_BACKGROUND',
-            l_affectedRegionSel = '.t-PageBody--login',
-            l_toggleValue = apex.item(l_toggleItem).getValue();
-
-        $(l_affectedRegionSel).removeClass(l_backgroundClass.join(' '));
-        _removeGridContainer();
-
-        if (l_toggleValue === 'GRADIENT'){
-            $(l_affectedRegionSel).addClass(l_backgroundClass[0]);
-        }
-        else if (l_toggleValue === 'GRID'){
-            $(l_affectedRegionSel).addClass(l_backgroundClass[1]);
-            _addGridContainer();
-        }
-        else if (l_toggleValue === 'IMAGE'){
-            $(l_affectedRegionSel).addClass(l_backgroundClass[2]);
-        }
-    };
 })(demo.page101, apex.jQuery);
 
 // Page 1100 Specific JS
@@ -228,13 +186,13 @@ demo.page1100 = {};
 
 (function(curPage, $){
     "use strict";
-    var l_rowSelectedClass      = 'rowSelected',
+    let l_rowSelectedClass      = 'rowSelected',
         l_reportShowCheckbox    = 'js-showCheckbox',
         l_checkbox_sel          = '.rowSelector',
         l_actionMenuTrigger_sel = '.actionMenu--trigger',
         l_actionMenu_sel        = '.actionMenu';
 
-    var menu$ = $("<div id='actionsMenu'></div>");
+    let menu$ = $("<div id='actionsMenu'></div>");
     
     curPage.initReportMenu = function() {
         $("body").append(menu$);
@@ -242,8 +200,8 @@ demo.page1100 = {};
         //get tjhe items and generate the menu content
         menu$.menu({
             asyncFetchMenu: function( menu, callback ) {
-                var triggeringElement = $(event.currentTarget);
-                var promise = apex.server.process( "menu_init", {x01: triggeringElement.data('empno') });
+                let triggeringElement = $(event.currentTarget);
+                let promise = apex.server.process( "menu_init", {x01: triggeringElement.data('empno') });
 
                 promise.done( function( data ) {
                     // use data to populate menu.items
@@ -256,7 +214,7 @@ demo.page1100 = {};
        
         // toggle the active state and show the menu
         $(l_actionMenuTrigger_sel).on('click', function() {
-            var target$,
+            let target$,
                 pos;
             
             // set active
@@ -281,7 +239,7 @@ demo.page1100 = {};
     $( function() {
         if (demo.isCurrentPage(1100)) {
             $('.example-1 ' + l_checkbox_sel + ', .example-2 ' + l_checkbox_sel + ', .example-3 ' + l_checkbox_sel).change(function () {
-                var report$    = $(this).closest('.t-Report'),
+                let report$    = $(this).closest('.t-Report'),
                     row$       = $(this).closest('tr'),
                     checkedCnt = report$.find(l_checkbox_sel + ':checked').length;
                 
@@ -355,11 +313,12 @@ var demo = demo || {};
 demo.page1400 = {};
 
 (function(curPage, $){
-    var treeNav_sel = '#t_TreeNav';
+    let treeNav_sel = '#t_TreeNav';
 
     function _addRegionAbove() {
         $('.page-1400 .aboveNavBar').prependTo(treeNav_sel);
     }
+    
     function _addRegionUnder() {
         $('.page-1400 .underNavBar').appendTo(treeNav_sel);
     }
@@ -383,7 +342,7 @@ var demo = demo || {};
 demo.page1500 = {};
 
 (function(curPage, $){
-    var flipContainer_sel = '.flip-container',
+    let flipContainer_sel = '.flip-container',
         front_sel         = '.front',
         back_sel          = '.back',
         flipTrigger_sel   = '.flipRegion--trigger';
@@ -402,15 +361,15 @@ demo.page1500 = {};
     function _fixHeight() {
         //For all the flip regions
         $(flipContainer_sel).each(function() {
-            var region$ = $(this);
+            let region$ = $(this);
 
             // Get the front and back content height
-            var flipRegionContentHeight = region$.find(front_sel + ',' + back_sel).map(function(){
+            let flipRegionContentHeight = region$.find(front_sel + ',' + back_sel).map(function(){
                 return $(this).children('.t-Region-bodyWrap').outerHeight();
             }).get();
 
             // Get the tallest region
-            var lMaxHeight = Math.max.apply(null, flipRegionContentHeight);
+            let lMaxHeight = Math.max.apply(null, flipRegionContentHeight);
 
             // Set the front and back height so that everything shows
             region$.find(front_sel + ',' + back_sel).each(function(){
@@ -467,7 +426,7 @@ demo.page1800 = {};
         if ( !message ) {
             message = 'No Message to Display.';
         }
-    
+        
         $('<div></div>').html( message ).dialog({
             title: title,
             resizable: false,
@@ -499,7 +458,7 @@ demo.page1900 = {};
 
 (function(curPage, util, $){
     curPage.toggleSelect = function( pSelectedId, pServerProcessName ) {
-        var l_selectedClass = 'is-Selected',
+        let l_selectedClass = 'is-Selected',
             $cardItem       = $('.t-Cards-' + pSelectedId);
             
         apex.server.process(pServerProcessName,
@@ -521,7 +480,7 @@ demo.page1900 = {};
     };
     
     function _debouncedSearch() {
-        var lDebounceTime = 500,
+        let lDebounceTime = 500,
             lSearchItem = '.search_item',
             lResultRegion = 'REG_EMP';
 

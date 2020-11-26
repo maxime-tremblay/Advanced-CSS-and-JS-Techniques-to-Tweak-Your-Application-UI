@@ -8,7 +8,7 @@ demo.page1900 = {};
 
 (function(curPage, util, $){
     curPage.toggleSelect = function( pSelectedId, pServerProcessName ) {
-        var l_selectedClass = 'is-Selected',
+        let l_selectedClass = 'is-Selected',
             $cardItem       = $('.t-Cards-' + pSelectedId);
             
         apex.server.process(pServerProcessName,
@@ -30,7 +30,7 @@ demo.page1900 = {};
     };
     
     function _debouncedSearch() {
-        var lDebounceTime = 500,
+        let lDebounceTime = 500,
             lSearchItem = '.search_item',
             lResultRegion = 'REG_EMP';
 

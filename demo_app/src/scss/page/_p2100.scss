@@ -1,0 +1,40 @@
+/* ***********************************
+ * Page 2100
+ * Dialog Animation - Examples
+ * *********************************** */
+$namespace: page-2100;
+
+.#{$namespace} {
+   .ui-dialog.app-dialog--pullOutRight {
+      outline: 0!important;
+      right: 0!important;
+      left: auto!important;
+      height: 100%!important;
+      max-height: 100vh!important;
+      top: 0!important;
+      bottom: 0!important;
+      max-width: 97vw;
+      border-radius: 0!important;
+      @include animation('anim-dialogPullOutRightOpen .4s ease 1!important');
+  }
+
+  @include keyframes(anim-dialogPullOutRightOpen) {
+      0% {
+         opacity: 0;
+         -webkit-transform: translateX(100%);
+         transform: translateX(100%)
+      }
+  
+      0.01% {
+         opacity: 0;
+         -webkit-transform: translateX(100%);
+         transform: translateX(100%)
+      }
+  
+      100% {
+         opacity: 1;
+         -webkit-transform: translateX(0);
+         transform: translateX(0)
+      }
+   }
+}

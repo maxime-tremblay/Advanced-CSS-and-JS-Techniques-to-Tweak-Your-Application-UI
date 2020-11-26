@@ -1,34 +1,34 @@
+// Prefix Class to be added at the body level
 .t-PageBody--overlayNav {
-    /*
-    .t-Button.t-Button--headerTree {
-        display: inline-block;
-    }
-*/
+    // Display the side menu as block fixed 
     .t-Body-nav {
         display: block;
         position: fixed;
-        top: 48px;
+        top: $header-height; /* Update to your header's height */
         bottom: 0;
-        z-index: 1000;
+        z-index: 1000; /* Make sure it shows above everything else */
     }
 
     .t-TreeNav {
         height: 100%;
     }
     
+    /* Force title to the full width of the page */
     .t-Body-title {
         left: 0;
         right: 0;
     }
 
+    /* When collapse move menu out of the viewport */
     &.js-navCollapsed .t-Body-nav {
         left: -100%;
     }
-
+    /* When expanded move menu on left of the screen */
     &.js-navExpanded .t-Body-nav {
         left:0;
     }
 
+    /* For smaller screen make the menu fullscreen */
     @media only screen and (max-width: 480px) {
         .t-Body-nav {
             width: 100%;

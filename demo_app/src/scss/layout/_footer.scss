@@ -1,3 +1,4 @@
+/* Footer stlying to display evertyhing on one line */
 .t-Footer {
     .t-Footer-body{
         display: flex;
@@ -31,6 +32,12 @@
     }
 }
 
+/* Go to Top Icon Animation */
+.t-Footer-topButton:hover .a-Icon {
+    @include animation('slide-up 2s 0s linear infinite');
+    opacity: 0;
+}
+
 @include keyframes(slide-up) {
     0% {
       opacity: 0;
@@ -44,15 +51,4 @@
       opacity: 0;
       transform: translateY(-5px);
     }
-}
-
-.t-Footer-topButton:hover .a-Icon {
-    @include animation('slide-up 2s 0s linear infinite');
-    opacity: 0;
-}
-
-/* Apex 5.1 Hide Screen Reader and Customize Links */
-footer .t-Footer-customize,
-footer .t-Footer-srMode {
-    display: none;
 }

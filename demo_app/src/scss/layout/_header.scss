@@ -1,40 +1,10 @@
-$image-src: '' !default;
-$image-width: 0px !default;
-$image-height: 0px !default;
-
-@if $is-kscope19 == true {
-    $image-src: '../images/Kscope19/header.png';
-    $image-width: 350px;
-    $image-height: 110px;
-}
-
-@if $is-kscope19 == true {
-$header-image-width: $image-width * $header-height / $image-height;
-
-/* Header - Adds image befoer application title */
-.t-Header-logo-link > span {
-    padding-left: $header-image-width + 15px; /* Move title to the right so that it's not under the image */
-}
-
-.t-Header-logo-link > span:before {
-    position: absolute;
-    content: "";
-    background: url($image-src);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: $header-image-width;
-    margin-left: -($header-image-width + 10px); /* Move the image to the left so that it's not on top of the text and add some extra margin so that there is space between the image and text */
-    top: 0;
-    bottom: 0;
-}
-}
-
 .t-Header {
+    /* Add rounded border to the header image */
     .apex-logo-img {
         border-radius: 25%;
     }
 
+    /* Add some shadow effect to the application's title */
     .apex-logo-text {
         text-shadow: 0px 3px 0px #b2a98f,
                      0px 14px 10px rgba(0,0,0,0.15),
