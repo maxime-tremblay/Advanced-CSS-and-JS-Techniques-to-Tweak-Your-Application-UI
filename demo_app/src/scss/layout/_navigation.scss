@@ -6,12 +6,12 @@
 .t-NavigationBar-menu .a-Menu-content .a-Menu-item:hover .a-Icon,
 .t-NavigationBar-menu .a-Menu-content .a-Menu-item:hover .fa {
   animation: tada 2s linear infinite;
-  color: #26cbff;
+  color: $accent-color;
 }
 
 /* Navigation Menu - Active Animation */
 .t-TreeNav .a-TreeView-node--topLevel .a-TreeView-content.is-selected .fa,
 .t-TreeNav .a-TreeView-node--topLevel .a-TreeView-content.is-selected .a-Icon {
   animation: pulse 2s linear infinite;
-  color: #26cbff;
+  color: $accent-color;
 }

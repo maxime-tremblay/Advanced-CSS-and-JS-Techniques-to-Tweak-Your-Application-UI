@@ -182,14 +182,14 @@
 .t-NavigationBar-menu .a-Menu-content .a-Menu-item:hover .fa {
   -webkit-animation: tada 2s linear infinite;
   animation: tada 2s linear infinite;
-  color: #26cbff; }
+  color: #F9BC00; }
 
 /* Navigation Menu - Active Animation */
 .t-TreeNav .a-TreeView-node--topLevel .a-TreeView-content.is-selected .fa,
 .t-TreeNav .a-TreeView-node--topLevel .a-TreeView-content.is-selected .a-Icon {
   -webkit-animation: pulse 2s linear infinite;
   animation: pulse 2s linear infinite;
-  color: #26cbff; }
+  color: #F9BC00; }
 
 .t-PageBody--overlayNav {
   /* Force title to the full width of the page */
@@ -248,7 +248,13 @@
  * *********************************** */
 .page-101 .t-Region--loginWrapper {
   position: relative;
-  height: 550px; }
+  height: 550px;
+  min-width: 460px; }
+  .page-101 .t-Region--loginWrapper .t-Login-region {
+    background-color: #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.075); }
   .page-101 .t-Region--loginWrapper .t-Region--login {
     position: absolute;
     z-index: 21;
